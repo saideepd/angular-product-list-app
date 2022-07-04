@@ -11,8 +11,8 @@ export class CartComponent implements OnInit {
   items = this.cartService.getItems();
 
   checkoutForm = this.formBuilder.group({
-    name: '',
-    address: ''
+    name: "",
+    address: "",
   });
 
   constructor(
@@ -22,7 +22,7 @@ export class CartComponent implements OnInit {
 
   onSubmit(): void {
     this.items = this.cartService.clearCart();
-    console.warn('Your order has been submitted', this.checkoutForm.value);
+    console.warn("Your order has been submitted", this.checkoutForm.value);
     this.checkoutForm.reset();
   }
 
